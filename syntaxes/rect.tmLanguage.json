@@ -1,0 +1,92 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "ReCT",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#packages"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+				"name": "keyword.control.rect",
+				"match": "\\b(try|catch|break|continue|for|return|to|while|do|die|from)\\b"
+				},
+				{
+					"name": "keyword.other.rect",
+					"match": "\\b(var|set|make|array|object)\\b"
+				},
+				{
+					"name": "comment.rect",
+					"match": "(#attach|#copy|#copyFolder)\\b"
+				},
+				{
+					"name": "keyword.other.unit.rect",
+					"match": "\\b(\\?|tcpsocketArr|tcplistenerArr|tcpclientArr|tcpsocket|tcplistener|tcpclient|any|bool|int|string|void|float|thread|anyArr|boolArr|intArr|stringArr|floatArr|threadArr)\\b"
+				},
+				{
+					"name": "keyword.other.rect",
+					"match": "\\b(package|namespace|type|use|dll)\\b"
+				}
+			]
+		},
+		"variables":{
+			"patterns": [
+				{
+				"name": "variable.name.rect",
+				"match": "\\b((\\w+(?=\\s+<-))|(\\w+(?=\\s+->))|(?<=\\:\\:)\\w+)\\b"
+				}
+			]
+		},
+		"packages":{
+			"patterns": [
+				{
+				"name": "variable.language",
+				"match": "\\b((\\w+)((?=\\:\\:))|(?<=package\\s)(\\w+)|(?<=use\\s)(\\w+)|(?<=package\\sdll\\s)(\\w+))\\b"
+				}
+			]
+		},
+		"comments":{
+			"patterns": [
+				{
+					"name": "comment.line.rect",
+					"match": "//.*$"
+				},
+				{
+					"name": "comment.block.rect",
+					"match": "/\\*(.*?)\\*/"
+				}
+			]
+		},
+		"numbers":{
+			"patterns": [
+				{
+					"name": "constant.numeric",
+					"match": "\\b\\d+\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.rect",
+			"begin": "\"",
+			"end": "\""
+		}
+	},
+	"scopeName": "source.rct"
+}

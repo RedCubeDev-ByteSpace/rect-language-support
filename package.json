@@ -1,0 +1,26 @@
+{
+    "name": "rect-language-support",
+    "displayName": "ReCT Language Support",
+    "description": "This extension adds ReCT Language support to VSCode",
+    "icon": "rectLogo.rct",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.53.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "rect",
+            "aliases": ["ReCT", "rect"],
+            "extensions": [".rct"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "rect",
+            "scopeName": "source.rct",
+            "path": "./syntaxes/rect.tmLanguage.json"
+        }]
+    }
+}
