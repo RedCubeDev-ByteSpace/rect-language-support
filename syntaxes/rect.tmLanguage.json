@@ -30,7 +30,7 @@
 				},
 				{
 					"name": "keyword.other.rect",
-					"match": "\\b(var|set|make|array|object)\\b"
+					"match": "\\b(acs|var|set|if|else|function|class|true|false|make|array|object)\\b"
 				},
 				{
 					"name": "comment.rect",
@@ -50,7 +50,7 @@
 			"patterns": [
 				{
 				"name": "variable.name.rect",
-				"match": "\\b((\\w+(?=\\s+<-))|(\\w+(?=\\s+->))|(?<=\\:\\:)\\w+)\\b"
+				"match": "\\b((\\w+(?=\\s+<-))|(\\w+(?=\\s+->))|(?<=\\:\\:)\\w+|(?<=>>\\s)\\w+)\\b"
 				}
 			]
 		},
