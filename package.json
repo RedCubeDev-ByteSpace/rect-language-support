@@ -3,6 +3,7 @@
     "displayName": "ReCT Language Support",
     "description": "This extension adds ReCT Language support to VSCode",
     "icon": "https://github.com/RedCubeDev-ByteSpace/rect-language-support/blob/main/rectLogo.jpg",
+    "author": {"name": "RedCubeDev", "url": "https://bytespace.tk/"},
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.53.0"
