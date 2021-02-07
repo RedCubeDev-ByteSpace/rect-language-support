@@ -2,7 +2,7 @@
     "name": "rect-language-support",
     "displayName": "ReCT Language Support",
     "description": "This extension adds ReCT Language support to VSCode",
-    "icon": "rectLogo.rct",
+    "icon": "https://github.com/RedCubeDev-ByteSpace/rect-language-support/blob/main/rectLogo.jpg",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.53.0"
