@@ -3,10 +3,15 @@
     "displayName": "ReCT Language Support",
     "description": "This extension adds ReCT Language support to VSCode",
     "icon": "rectLogo.jpg",
-    "author": {"name": "RedCubeDev", "url": "https://bytespace.tk/"},
+    "author": {
+        "name": "RedCubeDev",
+        "url": "https://bytespace.tk/"
+    },
     "publisher": "RedCubeDev",
-    "repository": {"url": "https://github.com/RedCubeDev-ByteSpace/rect-language-support"},
-    "version": "0.0.2",
+    "repository": {
+        "url": "https://github.com/RedCubeDev-ByteSpace/rect-language-support"
+    },
+    "version": "0.1.0",
     "engines": {
         "vscode": "^1.53.0"
     },
@@ -14,16 +19,25 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "rect",
-            "aliases": ["ReCT", "rect"],
-            "extensions": [".rct"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "rect",
-            "scopeName": "source.rct",
-            "path": "./syntaxes/rect.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "rect",
+                "aliases": [
+                    "ReCT",
+                    "rect"
+                ],
+                "extensions": [
+                    ".rct"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "rect",
+                "scopeName": "source.rct",
+                "path": "./syntaxes/rect.tmLanguage.json"
+            }
+        ]
     }
 }
