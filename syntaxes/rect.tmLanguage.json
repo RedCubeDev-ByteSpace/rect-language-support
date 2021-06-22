@@ -30,7 +30,7 @@
 				},
 				{
 					"name": "keyword.other.rect",
-					"match": "\\b(acs|var|set|if|else|function|class|true|false|make|array|object)\\b"
+					"match": "\\b(var|set|if|else|function|class|true|false|make|array|object|abs|virt|ovr)\\b"
 				},
 				{
 					"name": "comment.rect",
@@ -42,7 +42,7 @@
 				},
 				{
 					"name": "keyword.other.rect",
-					"match": "\\b(package|namespace|type|use|dll)\\b"
+					"match": "\\b(package|namespace|type|use|dll|alias)\\b"
 				}
 			]
 		},
