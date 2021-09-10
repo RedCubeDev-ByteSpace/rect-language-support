@@ -19,6 +19,9 @@
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#punctuation"
 		}
 	],
 	"repository": {
@@ -26,11 +29,11 @@
 			"patterns": [
 				{
 				"name": "keyword.control.rect",
-				"match": "\\b(try|catch|break|continue|for|return|to|while|do|die|from)\\b"
+				"match": "\\b(if|else|function|class|enum|try|catch|lambda|continue|break|return|base|for|from|while|to|die)\\b"
 				},
 				{
 					"name": "keyword.other.rect",
-					"match": "\\b(acs|var|set|if|else|function|class|true|false|make|array|object)\\b"
+					"match": "\\b(acs|var|is|make|array|set|inc|ser|virt|abs|ovr|Constructor)\\b"
 				},
 				{
 					"name": "comment.rect",
@@ -38,11 +41,15 @@
 				},
 				{
 					"name": "keyword.other.unit.rect",
-					"match": "\\b(\\?|tcpsocketArr|tcplistenerArr|tcpclientArr|tcpsocket|tcplistener|tcpclient|any|bool|int|string|void|float|thread|anyArr|boolArr|intArr|stringArr|floatArr|threadArr)\\b"
+					"match": "\\b(\\?|any|bool|int|byte|string|void|float|thread|action|anyArr|boolArr|intArr|byteArr|stringArr|floatArr|threadArr|actionArr)\\b"
 				},
 				{
 					"name": "keyword.other.rect",
-					"match": "\\b(package|namespace|type|use|dll)\\b"
+					"match": "\\b(package|use|alias|namespace|type|dll)\\b"
+				},
+				{
+					"name": "constant.rect",
+					"match": "\\b(true|false|null|nil)\\b"
 				}
 			]
 		},
@@ -50,7 +57,7 @@
 			"patterns": [
 				{
 				"name": "variable.name.rect",
-				"match": "\\b((\\w+(?=\\s+<-))|(\\w+(?=\\s+->))|(?<=\\:\\:)\\w+|(?<=>>\\s)\\w+)\\b"
+				"match": "\\b((\\w+(?=(\\s+|)<-))|(\\w+(?=(\\s+|)->))|(?<=\\:\\:)\\w+|(?<=(\\s|)->(\\s|))\\w+)\\b"
 				}
 			]
 		},
@@ -58,7 +65,7 @@
 			"patterns": [
 				{
 				"name": "variable.language",
-				"match": "\\b((\\w+)((?=\\:\\:))|(?<=package\\s)(\\w+)|(?<=use\\s)(\\w+)|(?<=package\\sdll\\s)(\\w+))\\b"
+				"match": "\\b((\\w+)((?=\\:\\:))|(?<=package\\s)(\\w+)|(?<=use\\s)(\\w+)|(?<=package\\sdll\\s)(\\w+)|(?<=alias\\s)(\\w+\\s\\w+))\\b"
 				}
 			]
 		},
@@ -70,7 +77,8 @@
 				},
 				{
 					"name": "comment.block.rect",
-					"match": "/\\*(.*?)\\*/"
+					"begin": "/\\*",
+					"end": "\\*/"
 				}
 			]
 		},
@@ -78,7 +86,7 @@
 			"patterns": [
 				{
 					"name": "constant.numeric",
-					"match": "\\b\\d+\\b"
+					"match": "\\b\\d+\\b|\\b\\d+\\.\\d+\\b"
 				}
 			]
 		},
@@ -86,6 +94,14 @@
 			"name": "string.quoted.double.rect",
 			"begin": "\"",
 			"end": "\""
+		},
+		"punctuation":{
+			"patterns": [
+				{
+					"name": "punctuation.rect",
+					"match": "[{}\\(\\);]"
+				}
+			]
 		}
 	},
 	"scopeName": "source.rct"

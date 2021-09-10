@@ -1,0 +1,26 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "ReCT On Rails",
+	"patterns": [
+		{
+			"include": "text.html.basic"
+		},
+		{
+			"begin": "#{",
+			"beginCaptures": {
+				"0": { "name": "punctuation.section.embedded.begin.rectonrails" }
+			},
+			"end": "}#",
+			"endCaptures": {
+				"0": { "name": "punctuation.section.embedded.end.rectonrails" }
+			},
+			"name": "rectcode.rectonrails",
+			"patterns": [
+				{
+					"include": "source.rct"
+				}
+			]
+		}
+	],
+	"scopeName": "source.rorhtml"
+}
