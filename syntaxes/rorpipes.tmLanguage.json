@@ -1,0 +1,57 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "ReCT",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#selectors"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#paths"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.pipes",
+					"match": "\\b(pipe|to)\\b"
+				},
+				{
+					"name": "entity.name.method.pipes",
+					"match": "\\b(domain|end)\\b"
+				}
+			]
+		},
+		"selectors":{
+			"patterns": [
+				{
+					"name": "entity.name.pipes",
+					"match": "[\\*\\?]"
+				}
+			]
+		},
+		"paths":{
+			"patterns": [
+				{
+					"name": "path.pipes",
+					"match": "((?<=pipe\\s)|(?<=to\\s)|(?<=domain\\s))[a-zA-Z0-9\\/\\.\\*\\?\\-_]+"
+				}
+			]
+		},
+		"comments":{
+			"patterns": [
+				{
+					"name": "comment.line.pipes",
+					"match": "#.+$"
+				}
+			]
+		}
+	},
+	"scopeName": "source.pipes"
+}

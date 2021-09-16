@@ -40,6 +40,16 @@
                 "extensions": [
                     ".rorhtml"
                 ]
+            },
+			{
+                "id": "rorpipes",
+                "aliases": [
+                    "ReCT On Rails Pipes",
+                    "pipe_router"
+                ],
+                "extensions": [
+                    ".pipes"
+                ]
             }
         ],
         "grammars": [
@@ -52,6 +62,11 @@
                 "language": "rectonrails",
                 "scopeName": "source.rorhtml",
                 "path": "./syntaxes/rorhtml.tmLanguage.json"
+            },
+			{
+                "language": "rorpipes",
+                "scopeName": "source.pipes",
+                "path": "./syntaxes/rorpipes.tmLanguage.json"
             }
         ]
     }
